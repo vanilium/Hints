@@ -1,0 +1,20 @@
+^(?:\+?[\-\s\d]+){0,4}(?:[-\s]?(?:\((?=\d+\)))?\d+(?:(?<=[\(\d])\))?[-\s]?)?(?:[-\s]?\d){5,12}$
+
+Format like +[country code]([operator code])[number]
++[country code] is optional
+Round brackets  is optional, and supporn only for operator code
+Space or - separator supported 
+
+Next like examples is valid:
++99(999) 999 99 99
++99 999 999 99 99
+999 999 99 99
+(999) 999 99 99
+(999)-999-99-99
+999-999-99-99
+9999999999
+
+Next like examples not valid:
+999) 999 99 99
+999-999--99-99
++99(999) 9999
