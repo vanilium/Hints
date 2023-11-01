@@ -2,7 +2,7 @@
 
 trait EnumComarations
 {
-  public function is($compareWith): bool
+        public function is($compareWith): bool
 	{
 		if(!enum_exists(self::class)) {
 			throw new \RuntimeException('Unresolved  applying the comparation trait');
@@ -17,5 +17,10 @@ trait EnumComarations
 		}
 		
 		return false;
+	}
+
+	public function isNot($compareWith): bool
+	{
+		return !$this->is($compareWith);
 	}
 }
